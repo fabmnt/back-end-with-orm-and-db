@@ -1,0 +1,38 @@
+{
+  "name": "node-typescript-biome-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/main.js",
+  "scripts": {
+    "test": "vitest --config vitest.config.mts",
+    "dev": "tsx watch src/main.ts",
+    "build": "tspc -p tsconfig.json",
+    "start": "node dist/main.js",
+    "lint": "biome lint ./src",
+    "format": "biome format ./src",
+    "check": "biome check --apply ./src",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:push": "drizzle-kit push"
+  },
+  "keywords": [],
+  "author": "Fabian Montoya @montoyafabian28",
+  "license": "ISC",
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@types/node": "^22.10.5",
+    "drizzle-kit": "^0.30.2",
+    "ts-patch": "3.3.0",
+    "tsx": "4.19.2",
+    "typescript": "^5.7.2",
+    "typescript-transform-paths": "3.5.3",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^2.1.8"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.14.0",
+    "dotenv": "^16.4.7",
+    "drizzle-orm": "^0.38.4",
+    "zod": "3.24.1"
+  }
+}
